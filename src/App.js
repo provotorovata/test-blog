@@ -7,7 +7,7 @@ import Posts from "./components/posts/Posts";
 import HeaderNavigation from "./components/common/HeaderNavigation";
 import PageNotFound from "./components/PageNotFound";
 import Header from "./components/common/Header";
-import RightNavBar from "./components/common/RightNavBar";
+import RightNavBar from "./components/common/rightNavBar/RightNavBar";
 import { Container, Row, Col } from "react-bootstrap";
 
 function App() {

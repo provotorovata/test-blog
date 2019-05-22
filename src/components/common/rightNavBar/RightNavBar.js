@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ListOfTags from "./ListOfTags";
-import { newData } from "../../data/Data";
+import { newData } from "../../../data/Data";
 import AddNewTag from "./AddNewTag";
 
 const RightNavBar = () => {

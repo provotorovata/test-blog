@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Form, FormControl, Button, FormGroup } from "react-bootstrap";
-import { newData } from "../../data/Data";
+import { Form, Button } from "react-bootstrap";
 
 const AddNewTag = props => {
   const [value, setValue] = useState("");
