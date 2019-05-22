@@ -8,7 +8,6 @@ import HeaderNavigation from "./components/common/HeaderNavigation";
 import PageNotFound from "./components/PageNotFound";
 import Header from "./components/common/Header";
 import RightNavBar from "./components/common/RightNavBar";
-import AddNewTag from "./components/common/AddNewTag";
 import { Container, Row, Col } from "react-bootstrap";
 
 function App() {
@@ -20,7 +19,6 @@ function App() {
         <Row>
           <Col sm={3}>
             <RightNavBar />
-            <AddNewTag />
           </Col>
           <Col />
         </Row>
