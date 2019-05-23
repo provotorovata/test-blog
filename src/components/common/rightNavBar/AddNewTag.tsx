@@ -1,15 +1,20 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 
-const AddNewTag = props => {
+interface Props {
+  addNewTags: Function;
+}
+
+const AddNewTag = (props: Props) => {
   const [value, setValue] = useState("");
   const [validated, setValidated] = useState(false);
 
-  const onChange = e => {
-    setValue(e.target.value);
+  const onChange = (e: React.SyntheticEvent) => {
+    let target = e.target as HTMLInputElement;
+    setValue(target.value);
   };
 
-  const addNewTags = e => {
+  const addNewTags = (e: React.SyntheticEvent) => {
     e.preventDefault();
     if (value) {
       props.addNewTags(value);

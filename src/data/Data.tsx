@@ -1,6 +1,10 @@
 import { generate as id } from "shortid";
+import { tag, post } from "../interfaces/Interfaces";
 
 class DataApi {
+  private tags: Array<tag>;
+  private posts: Array<post>;
+
   constructor() {
     this.tags = [
       { id: "1", title: "Кожа лица", isActive: 1 },
@@ -15,10 +19,10 @@ class DataApi {
         text: "ляляля",
         isActive: 1,
         creationDate: new Date(),
-        comments: [1, 2, 3],
+        comments: ["1", "2", "3"],
         titleImage: "",
         images: [],
-        tags: [1, 2]
+        tags: ["1", "2"]
       },
       {
         id: id(),
@@ -26,10 +30,10 @@ class DataApi {
         text: "ляляля2",
         isActive: 1,
         creationDate: new Date(),
-        comments: [1, 2],
+        comments: ["1", "2"],
         titleImage: "",
         images: [],
-        tags: [1]
+        tags: ["1"]
       },
       {
         id: id(),
@@ -37,10 +41,10 @@ class DataApi {
         text: "ляляля3",
         isActive: 1,
         creationDate: new Date(),
-        comments: [1, 4],
+        comments: ["1", "4"],
         titleImage: "",
         images: [],
-        tags: [1, 4]
+        tags: ["1", "4"]
       }
     ];
   }
@@ -49,7 +53,7 @@ class DataApi {
     return [...this.tags];
   }
 
-  addNewTags(nameTag) {
+  addNewTags(nameTag: string) {
     this.tags.push({ id: id(), title: nameTag, isActive: 1 });
     return [...this.tags];
   }

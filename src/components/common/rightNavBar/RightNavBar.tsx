@@ -5,7 +5,7 @@ import AddNewTag from "./AddNewTag";
 
 const RightNavBar = () => {
   const [tags, setTags] = useState(newData.getTags());
-  const addNewTags = nameTag => setTags(newData.addNewTags(nameTag));
+  const addNewTags = (nameTag: string) => setTags(newData.addNewTags(nameTag));
 
   return (
     <React.Fragment>

@@ -1,10 +1,14 @@
 import React from "react";
 import { Nav } from "react-bootstrap";
-
 import { NavLink } from "react-router-dom";
+import { tag } from "../../../interfaces/Interfaces";
 
-const ListOfTags = props => {
-  const tags = props.tags;
+interface Props {
+  tags: Array<tag>;
+}
+
+const ListOfTags = (Props: Props) => {
+  const tags = Props.tags;
 
   const listOftags = tags.map(tag => (
     <NavLink
